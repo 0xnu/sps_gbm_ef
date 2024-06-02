@@ -4,7 +4,7 @@ A quick experiment with stock portfolio price simulation using Geometric Brownia
 
 ### Stock Price Simulation
 
-The experiment unequivocally assumes that stock prices adhere to [Geometric Brownian Motion](https://en.wikipedia.org/wiki/Geometric_Brownian_motion). Under this assumption, the stock price random variable is as follows.
+The experiment unequivocally assumes stock prices adhere to [Geometric Brownian Motion](https://en.wikipedia.org/wiki/Geometric_Brownian_motion). Under this assumption, the stock price random variable is as follows.
 
 $$
 S = S_0 \exp \left( \left( \mu - \frac{\sigma^2}{2} \right) t + \sigma W_t \right)
@@ -77,7 +77,7 @@ asset0:
 - Annual return: 1.05%
 - Annual volatility: 2.98%
 
-By the way, the random variable is $X$ with an expected value of $\mu - \frac{\sigma^2}{2}$. I calculated the annual logarithmic rate of return by ignoring this part. In other words, the average annual logarithmic rate of return is $m$. If it is the same value, it means that it is approximate. The approximation is $p$, which is accurate when it is small.
+By the way, the random variable is $X$ with an expected value of $\mu - \frac{\sigma^2}{2}$. I calculated the annual logarithmic rate of return by ignoring this part. In other words, the average yearly logarithmic rate of return is $m$. If it is the same value, it means it is approximate. The approximation is $p$, which is accurate when it is small.
 
 For asset0, the annual return is 1.05%, which aligns closely with the expected return parameter ($\mu$) of 1% meticulously used in the simulation. Similarly, the annual volatility of 2.98% mirrors the volatility parameter ($\sigma$) of 3%.
 
@@ -117,7 +117,7 @@ The random portfolio has the average return of all stocks and the lowest volatil
 
 So far, plotting the relationship between risk and return allows me to judge whether each investment strategy is good or bad. I also calculated the risk and return of a random portfolio.
 
-When investing, you want to minimise risk in return for the same return. Therefore, we look for a portfolio that minimises the risk required for a specific return. Such a portfolio is called an efficient portfolio. The [efficient frontier](https://en.wikipedia.org/wiki/Efficient_frontier) is the relationship between risk and return of an [efficient portfolio](./efficient_frontier.ipynb).
+When investing, you want to minimise risk in return for the same return. Therefore, we look for a portfolio minimising the risk required for a specific return. Such a portfolio is called an efficient portfolio. The [efficient frontier](https://en.wikipedia.org/wiki/Efficient_frontier) is the relationship between risk and return of an [efficient portfolio](./efficient_frontier.ipynb).
 
 ![Random Portfolio](./images/efficient_frontier.png)
 
@@ -125,7 +125,7 @@ By investing in a portfolio using an efficient frontier, you can invest whilst m
 
 ### Equal Weight Portfolio
 
-From the previous analysis, I discovered that selecting an efficient portfolio can help obtain profits with minimal risk. However, there is a problem with it. It is not possible to know future returns or volatility when investing. Future portfolios use past data, but no guarantee exists that they will be efficient.
+From the previous analysis, I discovered selecting an efficient portfolio can help obtain profits with minimal risk. However, there is a problem with it. It is not possible to know future returns or volatility when investing. Future portfolios use past data, but no guarantee exists they will be efficient.
 
 Institutional investors can estimate their risks and returns by analysing various information and investing in efficient portfolios. However, it is difficult for retail investors to perform such information analysis. Therefore, I created a portfolio using a relatively simple method called an equal-weight portfolio. An [equal-weighted portfolio](./equal_weight_portfolio.ipynb) invests in an equal number of stocks. Now, let's compare the random portfolio and this equal-weighted portfolio.
 
@@ -147,7 +147,7 @@ It offers insights into the price movements of individual assets and the equal-w
 
 - **Asset Price Trends:** illustrates the price trajectories of ten individual assets. Some assets, like asset7 and asset8, show significant price appreciation, whilst others exhibit more modest growth.
 
-- **Equal Weight Portfolio:** The light blue line represents the equal weight portfolio's price trend. It follows a steady upward trajectory, indicating diversified growth but not as steep as that of the highest-performing individual assets.
+- **Equal Weight Portfolio:** The light blue line represents the equal weight portfolio's price trend. It follows a steady upward trajectory, indicating diversified growth but less steep than the highest-performing individual assets.
 
 - **Volatility:** The varying slopes and fluctuations of individual asset lines suggest different levels of volatility, with some assets exhibiting sharp price swings and others displaying more stable growth.
 
@@ -155,7 +155,7 @@ The Equal Weight Portfolio collectively highlight the trade-offs between individ
 
 ### Summary
 
-Through the experiment, I was able to optimise a stock portfolio and draw an efficient frontier. In addition, I created random and equal-weighted portfolios, which I then compared with the efficient frontier. The findings were clear and consistent. Buying a random portfolio was found to significantly reduce risk compared to buying stocks individually. Similarly, choosing an equal-weighted portfolio led to a selection that was remarkably close to the efficient frontier. These results instil confidence in the effectiveness of these strategies for stock portfolio optimisation.
+Through the experiment, I was able to optimise a stock portfolio and draw an efficient frontier. In addition, I created random and equal-weighted portfolios, which I then compared with the efficient frontier. The findings were clear and consistent. Buying a random portfolio was found to significantly reduce risk compared to buying stocks individually. Similarly, choosing an equal-weighted portfolio led to a selection remarkably close to the efficient frontier. These results instil confidence in the effectiveness of these strategies for stock portfolio optimisation.
 
 If you are still deciding what to buy as an investment, remember to consider all the options presented to you with equal weight.
 
